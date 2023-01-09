@@ -1,0 +1,19 @@
+.c-navbar{
+    display: flex;
+    background-color: color(blue-primary);
+
+    &__input{
+        width: 30%;
+    }
+
+
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        & > li{
+            color: color(gray-mid);
+            font-size: 1.3rem;
+        }
+    }
+}

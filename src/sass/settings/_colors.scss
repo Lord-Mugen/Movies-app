@@ -5,13 +5,11 @@
 $colors:(
   white: #fff,
   black: #000,
-  dark: #3D4142,
   dark-mid:#353535,
-  blue-primary: #2578CD,
+  blue-primary: #1a237e,
   gray-primary: #F5F6F8,
   gray-mid: #D2D2D2,
-  gray-cards: #efefef,
-  footer-gray: #fafafa,
+  gray-ligth: #efefef,
 );
 
 @function color($key) {
