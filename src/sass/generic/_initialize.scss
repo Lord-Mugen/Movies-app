@@ -1,0 +1,38 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    // A font-size of 62.5% will create a base font-size of 10px in most cases
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    margin:0;
+  }
+  
+  body {
+    height: 100%;
+    font: 400 1.6rem/1.2 $poppins, sans-serif;
+    color: color(black);
+    margin: 0;
+    padding: 0;
+  /*   overflow: scroll;
+    overflow-x: hidden; */
+   
+  }
+  
+  main{
+  /*   width: 100vw;
+    min-height: 100vh; */
+  }
+  
+  img {
+    display: block;
+  }

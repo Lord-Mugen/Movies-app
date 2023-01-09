@@ -1,0 +1,23 @@
+/*
+* Colors
+*/
+
+$colors:(
+  white: #fff,
+  black: #000,
+  dark: #3D4142,
+  dark-mid:#353535,
+  blue-primary: #2578CD,
+  gray-primary: #F5F6F8,
+  gray-mid: #D2D2D2,
+  gray-cards: #efefef,
+  footer-gray: #fafafa,
+);
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn 'That color is not defined: \'#{$key}\'';
+}

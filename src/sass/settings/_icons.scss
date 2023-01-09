@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "icons";
+    src: url("../../assets/fonts/icomoon.woff");
+  }
+  
+  %icon {
+    font: {
+      family: "icons";
+      style: normal;
+      variant: normal;
+      weight: normal;
+    }
+  
+    line-height: normal;
+    text-transform: none;
+  }
+  
+  $icons: (
+    whatsapp: "\e900",
+    call:  "\e901",
+    contact: "\e902",
+    corporate: "\e903",
+    date: "\e904",
+    description: "\e905",
+    email: "\e906",
+    car: "\e907",
+    hotel: "\e908",
+    flight: "\e909",
+    person: "\e90a",
+    location: "\e90b",
+    search: "\e90c",
+    verified: "\e90d",
+  );
+  
+  @function icon($key) {
+    @if map-has-key($icons, $key) {
+      @return map-get($icons, $key);
+    }
+  
+    @warn 'That icon is not defined: \'#{$key}\'';
+  }
