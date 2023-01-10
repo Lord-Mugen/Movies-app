@@ -6,10 +6,11 @@ $colors:(
   white: #fff,
   black: #000,
   dark-mid:#353535,
-  blue-primary: #1a237e,
+  black-primary: #212121,
   gray-primary: #F5F6F8,
   gray-mid: #D2D2D2,
   gray-ligth: #efefef,
+  red: #ff0606,
 );
 
 @function color($key) {
