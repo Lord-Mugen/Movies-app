@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <header>
@@ -10,19 +12,19 @@ const Navbar = () => {
         />
         <ul className="c-navbar__list">
           <li className="c-navbar__link">
-            <a className="c-navbar__a" href="#">
-              Popular
-            </a>
+            <Link to={"/popular"}>
+              <p className="c-navbar__a">Popular</p>
+            </Link>
           </li>
           <li className="c-navbar__link">
-            <a className="c-navbar__a" href="#">
-              Top Rated
-            </a>
+            <Link to={"/top-rated"}>
+              <p className="c-navbar__a">Top Rated</p>
+            </Link>
           </li>
           <li className="c-navbar__link">
-            <a className="c-navbar__a" href="#">
-              Upcoming
-            </a>
+            <Link to={"/upcoming"}>
+              <p className="c-navbar__a">Upcoming</p>
+            </Link>
           </li>
         </ul>
       </nav>

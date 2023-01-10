@@ -15,8 +15,7 @@
     height: auto;
     margin-right: 5px;
     border: 1px solid color(gray-mid);
-    border-radius: 3px;
-    padding-left: 1rem;
+    border-radius: 1px;
     
     @media (min-width: 48em){
       height: 3rem;
@@ -27,13 +26,14 @@
 
   &__list{
     list-style: none;
+    // background-color: red;
     width: 300px;
     display: flex;
     justify-content: space-between;
     padding-left: 0;
     
     @media (min-width: 48em){
-      width: 35%;
+      width: 43%;
       justify-content: space-around;
     }
 
@@ -48,6 +48,11 @@
     text-decoration: none;
     color: color(white);
     font-size: 14px;
+
+    @media (min-width: 48em){
+      // font-size: 1.8rem;
+    }
+
   }
   
 }
