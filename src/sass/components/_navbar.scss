@@ -85,24 +85,21 @@
   }
 
   &__nav-menu.show {
-    display: flex; 
+    display: flex;
   }
 
   &__a{
     text-decoration: none;
     color: color(white);
-    font-size: 14px;
-    display: block; 
+    font-size: 15px;
+    // display: block; 
     text-align: center; 
   }
 
   &__menu-icon {
     position: absolute;
-    left: 90%;
+    left: 87%;
     
-    &__menu-icon > i{
-      color: red;
-    }
     @media (min-width: 768px) { 
       display: none; 
     }
