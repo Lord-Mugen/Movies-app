@@ -1,3 +1,55 @@
+// .c-navbar{
+//   background-color: color(dark-mid);
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 20px 10px;
+//   width: 100%;
+
+//   @media (min-width: 48em){
+//     padding: 2rem 4rem;
+//   }
+
+//   &__search{
+//     width: 160px;
+//     height: auto;
+//     margin-right: 5px;
+//     border: 1px solid color(gray-mid);
+//     border-radius: 1px;
+    
+//     @media (min-width: 48em){
+//       height: 3rem;
+//       width: 40%;
+//     }
+
+//   }
+
+//   &__list{
+//     list-style: none;
+//     width: 300px;
+//     display: flex;
+//     justify-content: space-between;
+//     padding-left: 0;
+    
+//     @media (min-width: 48em){
+//       width: 43%;
+//       justify-content: space-around;
+//     }
+
+//   }
+
+//   &__link:nth-of-type(2),
+//   &__link:nth-of-type(3){
+//     margin-left: 2px;
+//   }
+  
+//   &__a{
+//     text-decoration: none;
+//     color: color(white);
+//     font-size: 14px;
+//   }
+  
+// }
 .c-navbar{
   background-color: color(dark-mid);
   display: flex;
@@ -6,53 +58,54 @@
   padding: 20px 10px;
   width: 100%;
 
-  @media (min-width: 48em){
-    padding: 2rem 4rem;
-  }
-
   &__search{
-    width: 160px;
-    height: auto;
-    margin-right: 5px;
-    border: 1px solid color(gray-mid);
-    border-radius: 1px;
-    
-    @media (min-width: 48em){
-      height: 3rem;
-      width: 40%;
-    }
-
+      width: 160px;
+      height: auto;
+      margin-right: 5px;
+      border: 1px solid color(gray-mid);
+      border-radius: 1px;
+        
+      @media (min-width: 48em){
+       height: 3rem;
+       width: 40%;
+      }
   }
-
-  &__list{
+  &__nav-menu {
+    display: none;
+    flex-direction: column;
     list-style: none;
-    // background-color: red;
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0;
-    
-    @media (min-width: 48em){
-      width: 43%;
-      justify-content: space-around;
+
+    @media (min-width: 768px){
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      z-index: 1;
+      width: 40rem;
     }
-
   }
 
-  &__link:nth-of-type(2),
-  &__link:nth-of-type(3){
-    margin-left: 2px;
+  &__nav-menu.show {
+    display: flex; 
   }
-  
+
   &__a{
     text-decoration: none;
     color: color(white);
     font-size: 14px;
-
-    @media (min-width: 48em){
-      // font-size: 1.8rem;
-    }
-
+    display: block; 
+    text-align: center; 
   }
-  
+
+  &__menu-icon {
+    position: absolute;
+    left: 90%;
+    
+    &__menu-icon > i{
+      color: red;
+    }
+    @media (min-width: 768px) { 
+      display: none; 
+    }
+  }
+
 }
