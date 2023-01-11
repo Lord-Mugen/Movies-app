@@ -1,25 +1,39 @@
 .c-slider {
   width: 100%;
-  height: 30vh;
-  margin: 0 auto;
-  //   padding-top: 3rem;
+  height: 45vh;
+  //   margin: 0 auto;
   position: relative;
 
   &__images-container {
     width: 100%;
     height: 100%;
+    padding-left: 5px;
     overflow: hidden;
+    scroll-behavior: smooth;
     position: relative;
     display: flex;
-    // justify-content: center;
+    align-items: center;
+    background-color: red;
+
+    @media (min-width: 48rem) {
+      justify-content: space-between;
+    }
   }
 
   &__image {
-    width: 90%; /* 3 images should have a width of 33% each */
+    // width: auto;
+    min-width: 300px;
     height: 90%;
     border-radius: 5px;
     position: relative;
     transition: all 0.5s ease;
+
+    @media (min-width: 48rem) {
+      min-width: 700px;
+    }
+    @media (min-width: 62rem) {
+      min-width: 950px;
+    }
   }
 
   &__btn {

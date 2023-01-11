@@ -14,10 +14,9 @@ const Slider = () => {
   );
 
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  /* Dejar un maximo de 5 imagenes en el slider */
   const images = [
-    "https://picsum.photos/800/350",
-    "https://picsum.photos/800/350",
-    "https://picsum.photos/800/350",
     "https://picsum.photos/800/350",
     "https://picsum.photos/800/350",
     "https://picsum.photos/800/350",
@@ -34,7 +33,7 @@ const Slider = () => {
             src={image}
             key={index}
             style={{
-              transform: `translateX(${index - currentSlide * 100}%)`,
+              transform: `translateX(${index - currentSlide * 99.5}%)`,
             }}
           />
         ))}
