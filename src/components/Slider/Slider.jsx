@@ -18,6 +18,11 @@ const Slider = () => {
     "https://picsum.photos/800/350",
     "https://picsum.photos/800/350",
     "https://picsum.photos/800/350",
+    "https://picsum.photos/800/350",
+    "https://picsum.photos/800/350",
+    "https://picsum.photos/800/350",
+    "https://picsum.photos/800/350",
+    "https://picsum.photos/800/350",
   ];
 
   return (
@@ -25,19 +30,17 @@ const Slider = () => {
       <div className="c-slider__images-container">
         {images.map((image, index) => (
           <img
-            className={`c-slider__image ${
-              currentSlide === index ? "active" : ""
-            }`}
+            className="c-slider__image"
             src={image}
             key={index}
             style={{
-              transform: `translateX(${(index - currentSlide) * 200}%)`,
+              transform: `translateX(${index - currentSlide * 100}%)`,
             }}
           />
         ))}
       </div>
       <button
-        className="c-slider__button"
+        className="c-slider__btn c-slider__btn-left"
         onClick={() =>
           setCurrentSlide((currentSlide - 1 + images.length) % images.length)
         }
@@ -45,7 +48,7 @@ const Slider = () => {
         {leftIcon}
       </button>
       <button
-        className="c-slider__button"
+        className="c-slider__btn c-slider__btn-right"
         onClick={() => setCurrentSlide((currentSlide + 1) % images.length)}
       >
         {rightIcon}
