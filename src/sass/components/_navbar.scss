@@ -1,106 +1,80 @@
-// .c-navbar{
-//   background-color: color(dark-mid);
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   padding: 20px 10px;
-//   width: 100%;
-
-//   @media (min-width: 48em){
-//     padding: 2rem 4rem;
-//   }
-
-//   &__search{
-//     width: 160px;
-//     height: auto;
-//     margin-right: 5px;
-//     border: 1px solid color(gray-mid);
-//     border-radius: 1px;
-    
-//     @media (min-width: 48em){
-//       height: 3rem;
-//       width: 40%;
-//     }
-
-//   }
-
-//   &__list{
-//     list-style: none;
-//     width: 300px;
-//     display: flex;
-//     justify-content: space-between;
-//     padding-left: 0;
-    
-//     @media (min-width: 48em){
-//       width: 43%;
-//       justify-content: space-around;
-//     }
-
-//   }
-
-//   &__link:nth-of-type(2),
-//   &__link:nth-of-type(3){
-//     margin-left: 2px;
-//   }
-  
-//   &__a{
-//     text-decoration: none;
-//     color: color(white);
-//     font-size: 14px;
-//   }
-  
-// }
 .c-navbar{
   background-color: color(dark-mid);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10px;
+  padding: 1.25rem 1.7rem;
   width: 100%;
+  
+  @media (min-width: 48em){
+    padding: 1.5rem 4rem 1.5rem 2rem;
+  }
 
   &__search{
-      width: 160px;
+      width: 50%;
       height: auto;
-      margin-right: 5px;
-      border: 1px solid color(gray-mid);
-      border-radius: 1px;
+      margin-right: 0.3125rem;
+      border: .5px solid color(gray-mid);
+      border-radius: 0.1875rem;
+      padding: 1rem;
         
       @media (min-width: 48em){
        height: 3rem;
-       width: 40%;
+       width: 30%;
       }
   }
   &__nav-menu {
     display: none;
     flex-direction: column;
     list-style: none;
-
-    @media (min-width: 768px){
+    
+    @media (min-width: 48rem){
       display: flex;
       flex-direction:row;
       justify-content: space-between;
       z-index: 1;
       width: 40rem;
     }
+
+    &__naav-menu:hover{
+      background-color: color(dark-mid-shadow);
+    }
   }
 
   &__nav-menu.show {
     display: flex;
+    justify-content: space-around;
+    background-color: color(dark-mid);
+    position: absolute;
+    right: 0%;
+    top: 11.5%;
+    width: 40%;
+    height: 30rem;
+    padding: 0 2rem;
+
+    @media (min-width: 48rem){
+      top: 3%;
+      height: auto;
+      min-width: 45%;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
   }
 
   &__a{
     text-decoration: none;
     color: color(white);
     font-size: 15px;
-    // display: block; 
-    text-align: center; 
+    text-align: center;
+    
+    
   }
 
   &__menu-icon {
     position: absolute;
     left: 87%;
     
-    @media (min-width: 768px) { 
+    @media (min-width: 48rem) { 
       display: none; 
     }
   }

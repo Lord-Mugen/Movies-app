@@ -4,7 +4,6 @@ import { Icon } from "@iconify/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const icon = <Icon icon="material-symbols:menu-rounded" />;
 
   return (
     <header>
@@ -53,38 +52,5 @@ const Navbar = () => {
     </header>
   );
 };
-{
-  /* <header>
-      <nav className="c-navbar">
-        <input
-          className="c-navbar__search"
-          type="search"
-          placeholder="Seach for movies..."
-          name="search"
-        />
-        <ul className="c-navbar__list">
-          <li className="c-navbar__link">
-            <Link to={"/"} className="c-navbar__a">
-              Home
-            </Link>
-          </li>
-          <li className="c-navbar__link">
-            <Link to={"/popular"} className="c-navbar__a">
-              Popular
-            </Link>
-          </li>
-          <li className="c-navbar__link">
-            <Link to={"/top-rated"} className="c-navbar__a">
-              Top Rated
-            </Link>
-          </li>
-          <li className="c-navbar__link">
-            <Link to={"/upcoming"} className="c-navbar__a">
-              Upcoming
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header> */
-}
+
 export default Navbar;
