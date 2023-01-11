@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 
 const Slider = () => {
@@ -13,27 +13,43 @@ const Slider = () => {
     />
   );
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const images = [
+    "https://picsum.photos/800/350",
+    "https://picsum.photos/800/350",
+    "https://picsum.photos/800/350",
+  ];
+
   return (
     <div className="c-slider">
-      <button className="c-slider__btn c-slider__left">{leftIcon}</button>
       <div className="c-slider__images-container">
-        <div>
-          <img src="https://picsum.photos/280/200" alt="imgSlider" />
-        </div>
-        <div>
-          <img src="https://picsum.photos/280/200" alt="imgSlider" />
-        </div>
-        <div>
-          <img src="https://picsum.photos/280/200" alt="imgSlider" />
-        </div>
-        <div>
-          <img src="https://picsum.photos/280/200" alt="imgSlider" />
-        </div>
-        <div>
-          <img src="https://picsum.photos/280/200" alt="imgSlider" />
-        </div>
+        {images.map((image, index) => (
+          <img
+            className={`c-slider__image ${
+              currentSlide === index ? "active" : ""
+            }`}
+            src={image}
+            key={index}
+            style={{
+              transform: `translateX(${(index - currentSlide) * 200}%)`,
+            }}
+          />
+        ))}
       </div>
-      <button className="c-slider__btn c-slider__right">{rightIcon}</button>
+      <button
+        className="c-slider__button"
+        onClick={() =>
+          setCurrentSlide((currentSlide - 1 + images.length) % images.length)
+        }
+      >
+        {leftIcon}
+      </button>
+      <button
+        className="c-slider__button"
+        onClick={() => setCurrentSlide((currentSlide + 1) % images.length)}
+      >
+        {rightIcon}
+      </button>
     </div>
   );
 };
