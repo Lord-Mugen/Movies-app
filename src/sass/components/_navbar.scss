@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 1.7rem;
+  padding: 1.25rem 1.5rem;
   width: 100%;
   
   @media (min-width: 48em){
@@ -47,7 +47,7 @@
     background-color: color(dark-mid);
     position: absolute;
     right: 0%;
-    top: 11.5%;
+    top: 7.5%;
     width: 40%;
     height: 30rem;
     padding: 0 2rem;
@@ -72,7 +72,7 @@
 
   &__menu-icon {
     position: absolute;
-    left: 87%;
+    left: 90%;
     
     @media (min-width: 48rem) { 
       display: none; 

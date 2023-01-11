@@ -1,13 +1,13 @@
 import Header from "../../components/Header/Header";
-import Slider from "../../components/Slider/Slider";
 
-const Home = () => {
+const Error = () => {
   return (
     <div>
       <Header />
-      <Slider />
+      <h1>Error</h1>
+      <p>page not found</p>
     </div>
   );
 };
 
-export default Home;
+export default Error;

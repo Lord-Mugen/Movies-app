@@ -6,6 +6,7 @@ import Home from "./routes/Home/Home";
 import Popular from "./routes/Popular/Popular";
 import TopRated from "./routes/Top Rated/TopRated";
 import Upcoming from "./routes/Upcoming/Upcoming";
+import Error from "./routes/Error/Error";
 import "./index.css";
 import "./sass/app.scss";
 
@@ -13,22 +14,22 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: <h1>Error</h1>, //debo hacer una pagina de error
+    errorElement: <Error />,
   },
   {
     path: "/popular",
     element: <Popular />,
-    errorElement: <h1>Error</h1>,
+    errorElement: <Error />,
   },
   {
     path: "top-rated",
     element: <TopRated />,
-    errorElement: <h1>Error</h1>,
+    errorElement: <Error />,
   },
   {
     path: "upcoming",
     element: <Upcoming />,
-    errorElement: <h1>Error</h1>,
+    errorElement: <Error />,
   },
 ]);
 
