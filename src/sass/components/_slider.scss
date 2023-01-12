@@ -2,37 +2,37 @@
   width: 100%;
   height: 45vh;
   position: relative;
+  overflow: hidden;
+  display: flex;
 
   &__images-container {
     width: 100%;
-    height: 100%;
-    padding-left: 5px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
+    // height: 100%;
+    // position: relative;
+    background-size: cover;
     background-color: color(gray-primary);
 
     @media (min-width: 48rem) {
-      justify-content: space-between;
+      // justify-content: space-between;
     }
   }
 
-  &__image {
-    min-width: 300px;
-    height: 90%;
-    border-radius: 5px;
-    position: relative;
-    transition: all 0.5s ease;
+  // &__image {
+  //   // min-width: 300px;
+  //   width: 100%;
+  //   height: auto;
+  //   border-radius: 5px;
+  //   position: relative;
+  //   transition: all 0.5s ease;
 
-    @media (min-width: 48rem) {
-      min-width: 700px;
-    }
+  //   @media (min-width: 48rem) {
+  //     min-width: 700px;
+  //   }
 
-    @media (min-width: 62rem) {
-      min-width: 950px;
-    }
-  }
+  //   @media (min-width: 62rem) {
+  //     min-width: 950px;
+  //   }
+  // }
 
   &__btn {
     border-radius: 50%;
