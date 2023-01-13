@@ -1,15 +1,19 @@
 .c-slider {
-  width: 100%;
+  width: 100vw;
   height: 45vh;
   position: relative;
   overflow: hidden;
   display: flex;
+  justify-content: center;
+  padding-top: 10px;
 
   &__images-container {
     width: 100%;
+    min-width: 96%;
     // height: 100%;
     // position: relative;
     background-size: cover;
+    background-repeat: no-repeat;
     background-color: color(gray-primary);
 
     @media (min-width: 48rem) {
